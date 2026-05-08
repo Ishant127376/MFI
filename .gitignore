@@ -1,0 +1,46 @@
+# ─── Environment secrets ─────────────────────────────────────
+# Ignore all env variants but keep the example template
+.env*
+.env.example
+
+# ─── Apple MFi certificate files ─────────────────────────────
+# Keep templates (e.g. csr.conf) but ignore private key and binary cert files
+!certs/csr.conf
+certs/*.key
+certs/*.pem
+certs/*.cer
+certs/*.p12
+certs/*.pfx
+certs/*.jks
+certs/
+
+# ─── Token downloads / generated files ──────────────────────
+downloads/
+tokens/
+# Only ignore downloaded CSVs, not all CSV files in the repo
+downloads/*.csv
+
+# ─── Node modules ────────────────────────────────────────────
+node_modules/
+
+# ─── Logs ────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ─── Build / coverage ────────────────────────────────────────
+coverage/
+dist/
+build/
+
+# ─── Caches / temp ──────────────────────────────────────────
+.cache/
+.parcel-cache/
+
+# ─── OS / editor artifacts ───────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
